@@ -1,0 +1,35 @@
+<h1>控制面板</h1>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+<div class="status-box {{status_class}}" >
+    {{status_text}}
+</div>
+<hr style="margin: 8px 0; border: 0; border-top: 0px solid #eee;">
+<div class="action-group">
+    <button class="btn btn-primary" onclick="location.href='{{guest_btn_url}}'">
+    {{guest_btn_text}}
+    </button>
+    <hr style="margin: 10px 0; border: 0; border-top: 1px solid #eee;">
+    <button class="btn btn-outline" onclick="location.href='/start'">
+        恢复自动检测模式
+    </button>
+</div>
+
+<hr style="margin: 20px 0; border: 1; border-top: 2px solid #5B7A74;">
+
+<div class="admin-group">
+    <button class="btn btn-primary" style="background: #6c757d; margin-top: 15px;" onclick="location.href='/admin'">
+    ⚙️  进入后台管理
+    </button>
+</div>
+
+<hr style="margin: 10px 0; border: 0; border-top: 1px solid #eee;">
+
+<div class="danger-group">
+    <button class="btn btn-danger" onclick="location.href='/shutdown_confirm'">
+        ⚠️  关闭 PVE 主机
+    </button>
+</div>
+
+<p style="font-size: 0.8rem; color: #999; margin-top: 10px;">
+    * 关机将自动尝试关闭所有运行中的虚拟机
+</p>

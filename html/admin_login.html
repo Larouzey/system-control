@@ -1,0 +1,16 @@
+<h2>{{login_title}}</h2>
+<p style="color: #666; font-size: 0.85rem;">{{login_desc}}</p>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+<form action="/admin_login_submit" method="POST">
+    <input type="hidden" name="auth_mode" value="{{auth_mode}}">
+    
+    <div style="margin: 20px 0;">
+        <label style="display:block; text-align:left; font-size:0.8rem; color:#888;">Google Authenticator 6位码</label>
+        <input type="text" name="otp_token" pattern="\d{6}" inputmode="numeric" required 
+               style="width:100%; padding:12px; font-size:1.2rem; text-align:center; letter-spacing:5px;">
+    </div>
+
+    {{password_field}}
+
+    <button type="submit" class="btn btn-primary" style="margin-top: 10px;">立即验证</button>
+</form>

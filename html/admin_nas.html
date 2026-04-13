@@ -1,0 +1,42 @@
+<div class="card-head" style="margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center;">
+    <div style="display: flex; align-items: center; gap: 15px;">
+        <h2 style="margin: 0;">NAS 存储控制面板</h2>
+        <span class="status-indicator" style="color: #10b981; font-weight: bold;">● 检测中...</span>
+    </div>
+    <button class="btn btn-danger" onclick="confirmNasShutdown()" style="padding: 8px 15px; font-size: 14px; width: auto; background-color: #e74c3c; color: white; border: none; border-radius: 6px; cursor: pointer;">
+        🔌 物理关机
+    </button>
+</div>
+
+<div class="disk-grid" style="grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); margin-bottom: 30px; gap: 15px;">
+    <div class="storage-card" style="text-align: center; padding: 15px;">
+        <span style="font-size: 12px; color: #7f8c8d;">CPU 负载</span>
+        <h3 id="nas_cpu" style="margin: 10px 0 0 0; color: var(--text-main);">--</h3>
+    </div>
+    <div class="storage-card" style="text-align: center; padding: 15px;">
+        <span style="font-size: 12px; color: #7f8c8d;">内存使用</span>
+        <h3 id="nas_mem" style="margin: 10px 0 0 0; color: var(--text-main);">--</h3>
+    </div>
+    <div class="storage-card" style="text-align: center; padding: 15px;">
+        <span style="font-size: 12px; color: #7f8c8d;">系统温度</span>
+        <h3 id="nas_temp" style="margin: 10px 0 0 0; color: var(--text-main);">--</h3>
+    </div>
+    <div class="storage-card" style="text-align: center; padding: 15px;">
+        <span style="font-size: 12px; color: #7f8c8d;">系统风扇</span>
+        <h3 id="nas_fan" style="margin: 10px 0 0 0; color: var(--text-main);">--</h3>
+    </div>
+    <div class="storage-card" style="text-align: center; padding: 15px;">
+        <span style="font-size: 12px; color: #7f8c8d;">运行时间</span>
+        <h3 id="nas_uptime" style="margin: 10px 0 0 0; color: var(--text-main);">--</h3>
+    </div>
+</div>
+
+<h3 style="margin-bottom: 15px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px;">存储卷监控</h3>
+
+<div id="disk_container" class="disk-grid">
+    <div style="grid-column: 1/-1; text-align: center; padding: 40px; color: #95a5a6;">
+        <p>🔄 正在提取 NAS 磁盘阵列数据...</p>
+    </div>
+</div>
+
+<script src="/static/nas_control.js"></script>
