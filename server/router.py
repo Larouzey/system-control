@@ -1,4 +1,3 @@
-
 from http.server import BaseHTTPRequestHandler
 from server.handlers_get import handle_get
 from server.handlers_post import handle_post
